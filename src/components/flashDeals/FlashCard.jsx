@@ -44,10 +44,10 @@ const FlashCard = ({ productItems, addToCart }) => {
         {productItems.map((productItems) => {
           return (
             <div className='box'>
-              <div className='product mtop'>
-                <div className='img'>
-                  <span className='discount'>{productItems.discount}% Off</span>
-                  <img src={productItems.cover} alt='' />
+              <div className='product mtop cursor-pointer'>
+                <div className='img space-y-2'>
+                  <span className='bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white text-sm p-2 rounded-full'>{productItems.discount}% Off</span>
+                  <img src={productItems.cover} className='h-[15rem] mx-auto' alt='' />
                   <div className='product-like'>
                     <label>{count}</label> <br />
                     <i className='fa-regular fa-heart' onClick={increment}></i>
@@ -62,13 +62,13 @@ const FlashCard = ({ productItems, addToCart }) => {
                     <i className='fa fa-star'></i>
                     <i className='fa fa-star'></i>
                   </div>
-                  <div className='price'>
-                    <h4>${productItems.price}.00 </h4>
+                  <div className='d_flex my-2 items-center'>
+                    <h4 className="text-[#8f0fff]">Rs.{productItems.price} </h4>
                     {/* step : 3  
                      if hami le button ma click garryo bahne 
                     */}
-                    <button onClick={() => addToCart(productItems)}>
-                      <i className='fa fa-plus'></i>
+                    <button className="px-2 py-1 rounded-sm bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br" onClick={() => addToCart(productItems)}>
+                      <i className='fa fa-plus text-white'></i>
                     </button>
                   </div>
                 </div>

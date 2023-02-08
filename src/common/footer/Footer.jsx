@@ -4,7 +4,7 @@ import React from "react"
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-white px-0 py-[100px]">
+      <div className="bg-black text-white px-0 py-[70px]">
         <div className='container grid2'>
           <div className='box'>
             <h1 className="text-[#8f0fff] font-extrabold text-xl italic mb-[30px]">Ready</h1>
@@ -50,7 +50,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </footer>
+      </div>
     </>
   )
 }

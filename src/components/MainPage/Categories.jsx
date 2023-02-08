@@ -4,23 +4,23 @@ const Categories = () => {
   const data = [
     {
       cateImg: "./images/category/cat1.png",
-      cateName: "Fashion",
+      cateName: "Apparel",
     },
     {
       cateImg: "./images/category/cat2.png",
-      cateName: "Electronic",
+      cateName: "Electronics",
     },
     {
       cateImg: "./images/category/cat3.png",
-      cateName: "Cars",
+      cateName: "Car Accessories",
     },
     {
       cateImg: "./images/category/cat4.png",
-      cateName: "Home & Garden",
+      cateName: "Toys",
     },
     {
       cateImg: "./images/category/cat5.png",
-      cateName: "Gifts",
+      cateName: "Gifts & Vouchers",
     },
     {
       cateImg: "./images/category/cat6.png",
@@ -28,15 +28,15 @@ const Categories = () => {
     },
     {
       cateImg: "./images/category/cat7.png",
-      cateName: "Health & Beauty",
+      cateName: "Beauty & Grooming",
     },
     {
       cateImg: "./images/category/cat8.png",
-      cateName: "Pets",
+      cateName: "Pet Care",
     },
     {
       cateImg: "./images/category/cat9.png",
-      cateName: "Baby Toys",
+      cateName: "Baby Products",
     },
     {
       cateImg: "./images/category/cat10.png",
@@ -53,7 +53,7 @@ const Categories = () => {
       <div className='category'>
         {data.map((value, index) => {
           return (
-            <div className='box f_flex' key={index}>
+            <div className='flex pl-10 hover:bg-violet-100 transition cursor-pointer' key={index}>
               <img src={value.cateImg} alt='' />
               <span>{value.cateName}</span>
             </div>

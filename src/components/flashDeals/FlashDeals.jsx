@@ -7,9 +7,9 @@ const FlashDeals = ({ productItems, addToCart }) => {
     <>
       <section className='flash'>
         <div className='container'>
-          <div className='heading f_flex'>
-            <i className='fa fa-bolt'></i>
-            <h1>Flash Deals</h1>
+          <div className='flex space-x-2 items-center justify-center'>
+            <i className='fa fa-bolt text-violet-400 my-4 text-xl'></i>
+            <h1 className="text-xl text-white my-4 font-medium">Flash Sale</h1>
           </div>
           <FlashCard productItems={productItems} addToCart={addToCart} />
         </div>
