@@ -1,6 +1,9 @@
 .TopCate {
   position: relative;
 }
+.background{
+  background: none;
+}
 .TopCate img {
   width: 100%;
   height: 100%;
@@ -11,7 +14,6 @@
   width: 100%;
 }
 .TopCate .nametop span {
-  background: #0f3460;
   color: #fff;
   font-size: 12px;
   padding: 5px 10px;
@@ -24,7 +26,6 @@
   left: 0;
 }
 .TopCate .nametop .tright {
-  background-color: aliceblue;
   color: black;
   position: absolute;
   right: 0;

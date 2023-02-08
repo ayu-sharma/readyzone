@@ -18,12 +18,12 @@ const TopCart = () => {
         {Tdata.map((value, index) => {
           return (
             <>
-              <div className='box product' key={index}>
+              <div className='box product cursor-pointer' key={index}>
                 <div className='nametop d_flex'>
-                  <span className='tleft'>{value.para}</span>
-                  <span className='tright'>{value.desc}</span>
+                  <span className='tleft bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 drop-shadow-sm'>{value.para}</span>
+                  <span className='tright bg-violet-200 drop-shadow-sm'>{value.desc}</span>
                 </div>
-                <div className='img'>
+                <div className='h-[8rem]'>
                   <img src={value.cover} alt='' />
                 </div>
               </div>

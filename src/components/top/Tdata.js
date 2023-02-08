@@ -1,28 +1,30 @@
+import pic4 from './reso/imgCar5.png'
+import pic5 from './reso/imgCar4.png'
 const Tdata = [
   {
+    cover: pic5,
+    para: "Laptops",
+    desc: "6k orders this week",
+  },
+  {
+    cover: pic4,
+    para: "Home Decor",
+    desc: "10,000+ orders this week",
+  },
+  {
     cover: "./images/top/category-1.png",
-    para: "headphone",
-    desc: "3k orders this week",
+    para: "Headphones",
+    desc: "3000+ orders this week",
   },
   {
     cover: "./images/top/category-2.png",
-    para: "watch",
-    desc: "4k orders this week",
+    para: "Watches",
+    desc: "4000+ orders this week",
   },
   {
     cover: "./images/top/category-3.png",
-    para: "sunglass",
-    desc: "6k orders this week",
-  },
-  {
-    cover: "./images/top/category-2.png",
-    para: "watch",
-    desc: "4k orders this week",
-  },
-  {
-    cover: "./images/top/category-3.png",
-    para: "sunglass",
-    desc: "6k orders this week",
+    para: "Sunglasses",
+    desc: "6000+ orders this week",
   },
 ]
 

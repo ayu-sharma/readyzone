@@ -8,8 +8,8 @@ const Home = () => {
     <>
       <section className='home'>
         <div className='container d_flex'>
-          <Categories />
-          <SliderHome />
+          <Categories/>
+          <SliderHome/>
         </div>
       </section>
     </>
