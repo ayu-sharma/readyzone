@@ -1,9 +1,9 @@
 import React from "react"
 import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Ddata from "./Ddata"
-import "../newarrivals/style.css"
+// import "../newarrivals/style.css"
 
 const Dcard = () => {
   const settings = {
@@ -19,12 +19,16 @@ const Dcard = () => {
         {Ddata.map((value, index) => {
           return (
             <>
-              <div className='box product' key={index}>
-                <div className='img'>
+            <div className='mt-8'>
+              <div className='bg-white p-2 ml-4 cursor-pointer' key={index}>
+                <div className='flex flex-col justify-center items-center'>
+                <div>
                   <img src={value.cover} alt='' width='100%' />
                 </div>
-                <h4>{value.name}</h4>
+                <h4 className=''>{value.name}</h4>
                 <span>{value.price}</span>
+                </div>
+              </div>
               </div>
             </>
           )

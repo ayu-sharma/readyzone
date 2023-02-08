@@ -9,10 +9,10 @@ const Discount = () => {
           <div className='heading d_flex'>
             <div className='heading-left row  f_flex'>
               <img src='https://img.icons8.com/windows/32/fa314a/gift.png' />
-              <h2>Big Discounts</h2>
+              <h2 className='text-white'>Big Discounts</h2>
             </div>
             <div className='heading-right row '>
-              <span>View all</span>
+              <span className='text-white cursor-pointer'>View all</span>
               <i className='fa-solid fa-caret-right'></i>
             </div>
           </div>
