@@ -4,7 +4,7 @@ const Tdata = [
   {
     cover: pic5,
     para: "Laptops",
-    desc: "6k orders this week",
+    desc: "7500+ orders this week",
   },
   {
     cover: pic4,

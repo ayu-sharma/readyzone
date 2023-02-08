@@ -9,10 +9,10 @@ const Cart = () => {
           return (
             <div className='box' key={index}>
               <div className='img'>
-                <img src={val.cover} alt='' />
+                <img className="h-[11rem]" src={val.cover} alt='' />
               </div>
               <h4>{val.name}</h4>
-              <span>${val.price}</span>
+              <span className="text-[#8f0fff]">Rs.{val.price}</span>
             </div>
           )
         })}

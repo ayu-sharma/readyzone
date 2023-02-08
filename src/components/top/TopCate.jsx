@@ -10,7 +10,7 @@ const TopCate = () => {
           <div className='d_flex'>
             <div className='flex space-x-2 items-center text-xl'>
               <i className='fa-solid fa-border-all text-violet-400'></i>
-              <h2 className="text-white">Popular Categories</h2>
+              <h2 className="text-white font-medium">Popular Categories</h2>
             </div>
             <div className='space-x-2 text-sm cursor-pointer'>
               <span className="text-white">View All</span>

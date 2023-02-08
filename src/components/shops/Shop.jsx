@@ -11,12 +11,12 @@ const Shop = ({ addToCart, shopItems }) => {
           <Catg />
 
           <div className='contentWidth'>
-            <div className='heading d_flex'>
-              <div className='heading-left row  f_flex'>
-                <h2>Mobile Phones</h2>
+            <div className='d_flex'>
+              <div className='f_flex my-4'>
+                <h2 className="text-white font-medium text-xl">Smartphones & Accessories</h2>
               </div>
-              <div className='heading-right row '>
-                <span>View all</span>
+              <div className='space-x-2 text-white text-sm my-4 cursor-pointer'>
+                <span>View All</span>
                 <i className='fa-solid fa-caret-right'></i>
               </div>
             </div>

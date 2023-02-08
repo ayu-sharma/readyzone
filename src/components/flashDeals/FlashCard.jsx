@@ -64,9 +64,6 @@ const FlashCard = ({ productItems, addToCart }) => {
                   </div>
                   <div className='d_flex my-2 items-center'>
                     <h4 className="text-[#8f0fff]">Rs.{productItems.price} </h4>
-                    {/* step : 3  
-                     if hami le button ma click garryo bahne 
-                    */}
                     <button className="px-2 py-1 rounded-sm bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br" onClick={() => addToCart(productItems)}>
                       <i className='fa fa-plus text-white'></i>
                     </button>

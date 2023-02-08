@@ -5,23 +5,23 @@ const Wrapper = () => {
   const data = [
     {
       cover: <i class='fa-solid fa-truck-fast'></i>,
-      title: "Worldwide Delivery",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      title: "Superfast Delivery",
+      decs: "Get your products delivered the same day with our hyperlocal delivery partners.",
     },
     {
       cover: <i class='fa-solid fa-id-card'></i>,
       title: "Safe Payment",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      decs: "Your payments are secure with Stripe's integrated payment gateway.",
     },
     {
       cover: <i class='fa-solid fa-shield'></i>,
-      title: "Shop With Confidence ",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      title: "Shop With Confidence",
+      decs: "Don't worry about your personal information getting leaked. All your data is encrypted.",
     },
     {
       cover: <i class='fa-solid fa-headset'></i>,
-      title: "24/7 Support ",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      title: "24/7 Support",
+      decs: "Call our customer care day or night to get assistance on the smallest of issues.",
     },
   ]
   return (
