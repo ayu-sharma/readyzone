@@ -7,6 +7,13 @@ import Data from "./components/Data"
 import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer"
 import Sdata from "./components/shops/Sdata"
+import Landing from "./external/Landing"
+import Signup from "./external/Signup"
+import Login from './external/Login'
+import Payment from "./external/Payment"
+import Product from "./external/Product"
+import Order from "./external/Order"
+import About from "./external/About"
 
 function App() {
   /*
@@ -70,12 +77,36 @@ function App() {
   return (
     <>
       <Router>
-        <Header CartItem={CartItem} />
+        {/* <Header CartItem={CartItem} /> */}
         <Switch>
           <Route path='/' exact>
+            <Landing/>
+            {/* <About/> */}
+            {/* <Signup/> */}
+            {/* <Payment/> */}
+            {/* <Product/> */}
+            {/* <Order/> */}
+          </Route>
+          <Route path='/about' exact>
+            {/* <Landing/> */}
+            <About/>
+            {/* <Signup/> */}
+            {/* <Payment/> */}
+            {/* <Product/> */}
+            {/* <Order/> */}
+          </Route>
+          <Route path='/login' exact>
+            <Login/>
+          </Route>
+          <Route path='/signup' exact>
+            <Signup/>
+          </Route>
+          <Route path='/home' exact>
+            <Header CartItem={CartItem} />
             <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
           </Route>
           <Route path='/cart' exact>
+            <Header CartItem={CartItem} />
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
         </Switch>
