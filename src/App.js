@@ -14,6 +14,7 @@ import Payment from "./external/Payment"
 import Product from "./external/Product"
 import Order from "./external/Order"
 import About from "./external/About"
+import Location from "./external/Location"
 
 function App() {
   /*
@@ -88,18 +89,20 @@ function App() {
             {/* <Order/> */}
           </Route>
           <Route path='/about' exact>
-            {/* <Landing/> */}
             <About/>
-            {/* <Signup/> */}
-            {/* <Payment/> */}
-            {/* <Product/> */}
-            {/* <Order/> */}
           </Route>
           <Route path='/login' exact>
             <Login/>
           </Route>
           <Route path='/signup' exact>
             <Signup/>
+          </Route>
+          <Route path='/detect-location' exact>
+            <Location/>
+          </Route>
+          <Route path='/payment' exact>
+            <Header CartItem={CartItem} />
+            <Payment/>
           </Route>
           <Route path='/home' exact>
             <Header CartItem={CartItem} />

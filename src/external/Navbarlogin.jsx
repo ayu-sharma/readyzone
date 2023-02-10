@@ -1,9 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useLogout } from "../hooks/useLogout"
+import { useAuthContext } from "../hooks/useAuthContext"
 
 function Navbarlogoutbuy() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const {logout} = useLogout()
+  const {user} = useAuthContext()
+  const handleClick = () => {
+    logout()
+  }
 
   return (
     <>
@@ -135,13 +142,25 @@ function Navbarlogoutbuy() {
           </ul>
         </div>
       </nav>
-      <div>
-        <Link to="/login">
-          <p className="font-semibold drop-shadow-md  text-white md:text-center right-0 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br transition duration-200 py-2 md:px-10 rounded-full mt-1 p-8 cursor-pointer">
-            Login
-          </p>
-        </Link>
-      </div>
+      {user && (
+        <div>
+          <span className="text-white mr-10">{user.email}</span>
+          <button onClick={handleClick}>
+           <p className="font-semibold drop-shadow-md  text-white md:text-center right-0 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br transition duration-200 py-2 md:px-10 rounded-full mt-1 p-8 cursor-pointer">
+              Logout
+            </p>
+          </button>
+        </div>
+      )}
+      {!user && (
+        <div>
+          <Link to="/login">
+            <p className="font-semibold drop-shadow-md  text-white md:text-center right-0 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br transition duration-200 py-2 md:px-10 rounded-full mt-1 p-8 cursor-pointer">
+              Login
+            </p>
+          </Link>
+        </div>
+      )}
     </div>
     <style>{`
       .hideMenuNav {

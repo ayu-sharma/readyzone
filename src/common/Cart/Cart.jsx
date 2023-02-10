@@ -1,10 +1,26 @@
 import React from "react"
 import "./style.css"
+import { Link } from "react-router-dom"
 
-const Cart = ({ CartItem, addToCart, decreaseQty }) => {
+const Cart = ({ CartItem, addToCart, decreaseQty, productItems}) => {
   // Stpe: 7   calucate total of items
   const totalPrice = CartItem.reduce((price, item) => price + item.qty * item.price, 0)
 
+  const checkout = async () => {
+    await fetch('http://localhost:4000/checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({item: CartItem.productItems})
+    }).then((response) => {
+      return response.json();
+    }).then((response) => {
+      if(response.url){
+        window.location.assign(response.url);
+      }
+    })
+  }
   // prodcut qty total
   return (
     <>
@@ -55,7 +71,7 @@ const Cart = ({ CartItem, addToCart, decreaseQty }) => {
                 <h4 className="text-[15px] font-normal">Total Price </h4>
                 <h3 className="text-xl font-medium text-[#8f0fff]">Rs.{totalPrice}</h3>
               </div>
-              <button className="text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md">Proceed To Pay</button>
+              <button  className="text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" onClick={checkout}>Checkout</button>
             </div>
         </div>
       </section>
