@@ -1,26 +1,26 @@
 import React from "react"
 import "./style.css"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
 const Cart = ({ CartItem, addToCart, decreaseQty, productItems}) => {
   // Stpe: 7   calucate total of items
   const totalPrice = CartItem.reduce((price, item) => price + item.qty * item.price, 0)
 
-  const checkout = async () => {
-    await fetch('http://localhost:4000/checkout', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({item: CartItem.productItems})
-    }).then((response) => {
-      return response.json();
-    }).then((response) => {
-      if(response.url){
-        window.location.assign(response.url);
-      }
-    })
-  }
+  // const checkout = async () => {
+  //   await fetch('http://localhost:4000/checkout', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify({item: CartItem.productItems})
+  //   }).then((response) => {
+  //     return response.json();
+  //   }).then((response) => {
+  //     if(response.url){
+  //       window.location.assign(response.url);
+  //     }
+  //   })
+  // }
   // prodcut qty total
   return (
     <>
@@ -71,7 +71,13 @@ const Cart = ({ CartItem, addToCart, decreaseQty, productItems}) => {
                 <h4 className="text-[15px] font-normal">Total Price </h4>
                 <h3 className="text-xl font-medium text-[#8f0fff]">Rs.{totalPrice}</h3>
               </div>
-              <button  className="text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" onClick={checkout}>Checkout</button>
+              {/* <a className="ONEPLUS-BUDS-PRO text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" href="https://buy.stripe.com/test_9AQ5lTaF32Q2b0Q6ou" target='_blank'>Checkout</a> */}
+              {/* <a className="AIRPODS-PRO text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" href="https://buy.stripe.com/test_4gw9C9aF3fCO1qg005" target='_blank'>Checkout</a> */}
+              {/* <a className="IPHONE-13 text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" href="https://buy.stripe.com/test_dR6aGd4gF2Q20mcdQU" target='_blank'>Checkout</a> */}
+              {/* <a className="IPHONE-14-PRO text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" href="https://buy.stripe.com/test_cN2eWt14t9eqb0QfZ1" target='_blank'>Checkout</a> */}
+              {/* <a className="AIR-JORDANS text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" href="https://buy.stripe.com/test_bIY4hP28xcqC2ukaEF" target='_blank'>Checkout</a> */}
+              {/* <a className="Iphone14Pro+BudsPro text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" href="https://buy.stripe.com/test_9AQaGd6oN62eed2aEE" target='_blank'>Checkout</a> */}
+              <a className="Iphone13+AirpodsPro text-white text-center w-full flow-root float-right py-2 px-4 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br rounded-md" href="https://buy.stripe.com/test_4gwbKhaF30HU2uk8wy" target='_blank'>Checkout</a>
             </div>
         </div>
       </section>
